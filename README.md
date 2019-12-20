@@ -1,5 +1,5 @@
 # Slalom's React-Native Dojo!
-React-native skeleton code for the slalom dojo.
+React-native skeleton code for the slalom dojo. Idea discussed during sync-up: shopping list, with shopping cart for React Native Dojo
 
 ## TODO-List
 
