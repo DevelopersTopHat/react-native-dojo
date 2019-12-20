@@ -6,7 +6,7 @@ React-native skeleton code for the slalom dojo.
 1. Build skeleton project - (Abdeali)
 2. Create README with TODO-List - (Abdeali)
 3. Create dojo project description in README
-4. Create list of steps to begin using React-Native on different OS for each device OS OR link React-Native getting started doc - (Abdeali)
+4. Create list of steps to begin using React-Native on different OS for each device OS OR link React-Native getting started doc
 5. Take screenshots of the various screens reached during installation
 6. Make pull request for each of the feature implementations for the dojo.
 7. Detail the steps needed to reach the content in each pull request.
