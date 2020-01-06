@@ -37,6 +37,8 @@ You will also need an IDE to edit your code in. VSCode is the recommended IDE fo
 
 Result: You should end up having a blank screen on the device, with no errors.
 
+![Screenshot of blank result screen](docs/images/blank_screen.png)
+
 ###### Exercise 2: Setup React Navigation? (Not sure if we are going to use react navigation for this dojo)
 
 ###### Exercise 3: Make a Store
