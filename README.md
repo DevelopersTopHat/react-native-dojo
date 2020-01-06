@@ -19,24 +19,30 @@ React-native skeleton code for the slalom dojo. Idea discussed during sync-up: s
 
 Note: this should only include how to get this repo and and make it work on a simulator or device. For getting started with React-Native, link to the React-Native docs https://facebook.github.io/react-native/docs/getting-started
 
-#### Challenges to Complete
-
-###### Challenge 1: Setup the Project
-
-Start by downloading all of the necessary programs for running React Native on your operating system. For this Dojo, we will be using Yarn as our package manager, which you can install here: https://yarnpkg.com/en/docs/install
-
-Once you have successfully installed all of the neccessary programs make sure you can generate and run a React Native application.
-
 Running an application is different depending on if you use a physical device, or a virtual one. The pre-requisites for using a virtual device are having either XCode or Android Studio installed if you are using MacOS, or Android Studio if you are using Windows. Virtualization needs to be enabled on your device if you want to use a simulator on your computer.
 
 If you are planning on using a real device to debug your React Native application, usb debugging must be enabled on your device (https://support.brightcove.com/debugging-mobile-devices) **Must verify that the ios portion of the linked doc works**. You will also need a charging cable to connect your device to the computer you are working from.
 
-###### Challenge 2: Setup React Navigation? (Not sure if we are going to use react navigation for this dojo)
+You will also need an IDE to edit your code in. VSCode is the recommended IDE for this dojo :) 
 
-###### Challenge 3: Make a Store
+#### Exercises to Complete
 
-###### Challenge 4: Add Logic to the Store
+###### Exercise 1: Setup the Project
 
-###### Challenge 5: Style the Store
+1. Start by downloading all of the necessary programs for running React Native on your operating system. For this Dojo, we will be using Yarn as our package manager, which you can install here: https://yarnpkg.com/en/docs/install
 
-###### Challenge 6: 
+2. Once you have successfully installed all of the neccessary programs make sure you can generate and run a React Native application.
+
+3. Remove the default code provided with the initial code generation.
+
+Result: You should end up having a blank screen on the device, with no errors.
+
+###### Exercise 2: Setup React Navigation? (Not sure if we are going to use react navigation for this dojo)
+
+###### Exercise 3: Make a Store
+
+###### Exercise 4: Add Logic to the Store
+
+###### Exercise 5: Style the Store
+
+###### Exercise 6: 
