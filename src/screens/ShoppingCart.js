@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 import HomeScreen from './HomeScreen';
-import CatalogScreen from './CatalogScreen';
+import CatalogScreen from '../components/ProductCatalog';
 import ShoppingCartIcon from '../components/ShoppingCartIcon';
 
 export default class ShoppingCart extends Component {

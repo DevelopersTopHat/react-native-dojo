@@ -8,14 +8,13 @@
 
 import React, { Component } from 'react';
 import {StyleSheet, View, Text} from 'react-native';
+import ProductCatalog from '../components/ProductCatalog';
 
 export default class HomeScreen extends Component {
   render() {
     return (
       <View>
-        <Text>
-          HomeScreen
-        </Text>
+        <ProductCatalog />
       </View>
     );
   }
