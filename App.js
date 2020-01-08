@@ -6,24 +6,14 @@
  * @flow
  */
 
-import React from 'react';
-import {
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-} from 'react-native';
+import React, { Component } from 'react';
+import {StyleSheet, ScrollView, View, Text} from 'react-native';
 
-const App = () => {
-  return (
-    <>
+import ShoppingCart from './src/screens/ShoppingCart';
+export default class App extends Component {
+  render() {
+    return <ShoppingCart />;
+  }
+}
 
-    </>
-  );
-};
-
-const styles = StyleSheet.create({
-
-});
-
-export default App;
+const styles = StyleSheet.create({});

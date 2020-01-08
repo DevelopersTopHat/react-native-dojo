@@ -31,7 +31,17 @@ You will also need an IDE to edit your code in. VSCode is the recommended IDE fo
 
 1. Start by downloading all of the necessary programs for running React Native on your operating system. For this Dojo, we will be using Yarn as our package manager, which you can install here: https://yarnpkg.com/en/docs/install
 
-2. Once you have successfully installed all of the neccessary programs make sure you can generate and run a React Native application.
+2. Once you have successfully installed all of the neccessary programs make sure you can generate and run a React Native application. To run the project you can use the command 
+
+For Android:
+`
+react-native run-android
+`
+
+For iOS:
+`
+react-native run-ios
+`
 
 ![Screenshot of blank result screen](docs/images/home_screen.png)
 
