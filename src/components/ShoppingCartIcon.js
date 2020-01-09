@@ -2,19 +2,26 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {connect} from 'react-redux';
 
 const ShoppingCartIcon = (props) => {
     return (
       <View style={styles.container}>
         <View style={styles.itemCountContainer}>
-          <Text style={styles.itemCount}>0</Text>
+          <Text style={styles.itemCount}>{props.cartItems.length}</Text>
         </View>
         <Icon name="shopping-cart" size={30} />
       </View>
     );
 };
 
-export default ShoppingCartIcon;
+const mapStateToProps = (state) => {
+  return {
+    cartItems: state
+  }
+};
+
+export default connect(mapStateToProps)(ShoppingCartIcon);
 
 const styles = StyleSheet.create({
   container: {

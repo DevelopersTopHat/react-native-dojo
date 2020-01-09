@@ -34,7 +34,7 @@ export default class ProductCatalog extends Component {
     return products.map((item, index) => {
       return (
         <View key={index} style={styles.item}>
-          <TouchableOpacity onPress={() => {}} style={styles.addItem}>
+          <TouchableOpacity onPress={(item) => {this.props.onPress(item)}} style={styles.addItem}>
             <Text style={styles.itemText}>
               {item.name + ' - $' + item.price}
             </Text>
