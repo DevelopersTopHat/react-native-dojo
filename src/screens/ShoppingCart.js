@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 import HomeScreen from './HomeScreen';
-import CatalogScreen from '../components/ProductCatalog';
+import CartScreen from './CartScreen';
 import ShoppingCartIcon from '../components/ShoppingCartIcon';
 
 export default class ShoppingCart extends Component {
@@ -16,7 +16,7 @@ export default class ShoppingCart extends Component {
 
 const AppStackNavigator = createStackNavigator({
   Home: HomeScreen,
-  Catalog: CatalogScreen
+  Cart: CartScreen
 }, {
   navigationOptions: {
     headerTitle: 'Shopping App',

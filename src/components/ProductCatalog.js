@@ -16,36 +16,24 @@ import {
   ScrollView,
 } from 'react-native';
 
-import {electronics} from '../services/DataService';
-
 export default class ProductCatalog extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      catalog: [],
-    };
-  }
-
-  componentDidMount() {
-    this.setState({catalog: electronics});
-  }
-
   renderProducts = products => {
     return products.map((item, index) => {
       return (
-        <View key={index} style={styles.item}>
-          <TouchableOpacity onPress={(item) => {this.props.onPress(item)}} style={styles.addItem}>
-            <Text style={styles.itemText}>
-              {item.name + ' - $' + item.price}
-            </Text>
-            <Image
-              style={styles.itemImage}
-              source={{
-                uri: item.image,
-              }}
-            />
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity
+          onPress={() => {
+            this.props.onPress(item);
+          }}
+          key={index}
+          style={styles.item}>
+          <Text style={styles.itemText}>{item.name + ' - $' + item.price}</Text>
+          <Image
+            style={styles.itemImage}
+            source={{
+              uri: item.image,
+            }}
+          />
+        </TouchableOpacity>
       );
     });
   };
@@ -55,7 +43,7 @@ export default class ProductCatalog extends Component {
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.contentContainer}>
           <View style={styles.itemContainer}>
-            {this.renderProducts(this.state.catalog)}
+            {this.renderProducts(this.props.products)}
           </View>
         </View>
       </ScrollView>
@@ -90,10 +78,9 @@ const styles = StyleSheet.create({
     height: undefined,
     aspectRatio: 1,
     alignSelf: 'center',
-    marginVertical: 8
+    marginVertical: 8,
   },
   itemText: {
     fontSize: 18,
   },
-  addItem: {},
 });

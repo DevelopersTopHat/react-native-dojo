@@ -6,25 +6,47 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import ProductCatalog from '../components/ProductCatalog';
 import {connect} from 'react-redux';
+
+import DataService from '../services/DataService';
 class HomeScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: null,
+    };
+  }
+
+  async componentDidMount() {
+    const dataService = new DataService();
+    const electronics = await dataService.getElectronicProducts();
+    this.setState({products: electronics});
+  }
+
   render() {
     return (
-      <View>
-        <ProductCatalog onPress={this.props.addItemToCart}/>
-      </View>
+      <>
+        {this.state.products && (
+          <View>
+            <ProductCatalog
+              onPress={this.props.addItemToCart}
+              products={this.state.products}
+            />
+          </View>
+        )}
+      </>
     );
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    addItemToCart: product => dispatch({type: 'ADD_TO_CART', payload: product})
-  }
-}
+    addItemToCart: product => dispatch({type: 'ADD_TO_CART', payload: product}),
+  };
+};
 
 /**
  * Not passing the reducer any state, so the first param is null
