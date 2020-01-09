@@ -86,9 +86,11 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   itemImage: {
-    width: '100%',
+    width: '90%',
     height: undefined,
-    aspectRatio: 1
+    aspectRatio: 1,
+    alignSelf: 'center',
+    marginVertical: 8
   },
   itemText: {
     fontSize: 18,
