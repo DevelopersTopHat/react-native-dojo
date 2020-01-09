@@ -1,26 +1,28 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {connect} from 'react-redux';
 
-import { withNavigation } from 'react-navigation'
+import {withNavigation} from 'react-navigation';
 
-const ShoppingCartIcon = (props) => {
-    return (
-      <TouchableOpacity onPress={() => props.navigation.navigate('Cart')} style={styles.container}>
-        <View style={styles.itemCountContainer}>
-          <Text style={styles.itemCount}>{props.cartItems.length}</Text>
-        </View>
-        <Icon name="shopping-cart" size={30} />
-      </TouchableOpacity>
-    );
+const ShoppingCartIcon = props => {
+  return (
+    <TouchableOpacity
+      onPress={() => props.navigation.navigate('Cart')}
+      style={styles.container}>
+      <View style={styles.itemCountContainer}>
+        <Text style={styles.itemCount}>{props.cartItems.length}</Text>
+      </View>
+      <Icon name="shopping-cart" size={30} />
+    </TouchableOpacity>
+  );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    cartItems: state
-  }
+    cartItems: state,
+  };
 };
 
 export default connect(mapStateToProps)(withNavigation(ShoppingCartIcon));
@@ -30,7 +32,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: 10
+    marginHorizontal: 10,
   },
   itemCountContainer: {
     position: 'absolute',
@@ -46,6 +48,6 @@ const styles = StyleSheet.create({
   itemCount: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 18
-  }
+    fontSize: 18,
+  },
 });
