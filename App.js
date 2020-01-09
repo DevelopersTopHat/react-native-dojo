@@ -7,7 +7,6 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, ScrollView, View, Text} from 'react-native';
 
 import ShoppingCart from './src/screens/ShoppingCart';
 import {Provider} from 'react-redux';
@@ -21,5 +20,3 @@ export default class App extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({});
