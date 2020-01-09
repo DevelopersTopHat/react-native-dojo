@@ -10,7 +10,7 @@ import React, {Component} from 'react';
 import {View} from 'react-native';
 import ProductCatalog from '../components/ProductCatalog';
 import {connect} from 'react-redux';
-
+import {REMOVE_FROM_CART} from '../reducers/types';
 class CartScreen extends Component {
   static navigationOptions = {
     headerTitle: 'My Cart',
@@ -38,7 +38,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     removeItem: product => {
-      dispatch({type: 'REMOVE_FROM_CART', payload: product});
+      dispatch({type: REMOVE_FROM_CART, payload: product});
     },
   };
 };

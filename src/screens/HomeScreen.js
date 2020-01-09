@@ -12,6 +12,7 @@ import ProductCatalog from '../components/ProductCatalog';
 import {connect} from 'react-redux';
 
 import DataService from '../services/DataService';
+import {ADD_TO_CART} from '../reducers/types';
 class HomeScreen extends Component {
   constructor(props) {
     super(props);
@@ -44,7 +45,7 @@ class HomeScreen extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addItemToCart: product => dispatch({type: 'ADD_TO_CART', payload: product}),
+    addItemToCart: product => dispatch({type: ADD_TO_CART, payload: product}),
   };
 };
 
