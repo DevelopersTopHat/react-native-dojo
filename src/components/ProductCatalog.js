@@ -15,17 +15,17 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
+import ButtonComponent from './ButtonComponent';
 
 export default class ProductCatalog extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   renderProducts = products => {
     return products.map((item, index) => {
       return (
-        <TouchableOpacity
-          onPress={() => {
-            this.props.onPress(item);
-          }}
-          key={index}
-          style={styles.item}>
+        <View key={index} style={styles.item}>
           <Text style={styles.itemText}>{item.name + ' - $' + item.price}</Text>
           <Image
             style={styles.itemImage}
@@ -33,7 +33,12 @@ export default class ProductCatalog extends Component {
               uri: item.image,
             }}
           />
-        </TouchableOpacity>
+          <ButtonComponent
+            item={item}
+            onPressAdd={this.props.onPressAdd}
+            onPressRemove={this.props.onPressRemove}
+          />
+        </View>
       );
     });
   };

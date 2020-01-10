@@ -12,7 +12,7 @@ import ProductCatalog from '../components/ProductCatalog';
 import {connect} from 'react-redux';
 
 import DataService from '../services/DataService';
-import {ADD_TO_CART} from '../reducers/types';
+import {ADD_TO_CART, REMOVE_FROM_CART} from '../reducers/types';
 class HomeScreen extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +33,8 @@ class HomeScreen extends Component {
         {this.state.products && (
           <View>
             <ProductCatalog
-              onPress={this.props.addItemToCart}
+              onPressAdd={this.props.addItemToCart}
+              onPressRemove={this.props.removeItemFromCart}
               products={this.state.products}
             />
           </View>
@@ -46,6 +47,7 @@ class HomeScreen extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     addItemToCart: product => dispatch({type: ADD_TO_CART, payload: product}),
+    removeItemFromCart: product => dispatch({type: REMOVE_FROM_CART, payload: product})
   };
 };
 
