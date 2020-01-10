@@ -16,8 +16,8 @@ import {
   ScrollView,
 } from 'react-native';
 import ButtonComponent from './ButtonComponent';
-
-export default class ProductCatalog extends Component {
+import {connect} from 'react-redux';
+class ProductCatalog extends Component {
   constructor(props) {
     super(props);
   }
@@ -55,6 +55,10 @@ export default class ProductCatalog extends Component {
     );
   }
 }
+
+
+
+export default ProductCatalog;
 
 const styles = StyleSheet.create({
   scrollContainer: {

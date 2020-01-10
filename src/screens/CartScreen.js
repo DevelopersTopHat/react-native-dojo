@@ -43,7 +43,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-/**
- * Not passing the reducer any state, so the first param is null
- */
 export default connect(mapStateToProps, mapDispatchToProps)(CartScreen);
