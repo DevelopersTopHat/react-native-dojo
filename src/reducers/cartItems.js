@@ -5,10 +5,9 @@ const cartItems = (state = [], action) => {
     case ADD_TO_CART:
       return [...state, action.payload];
     case REMOVE_FROM_CART:
-      const itemIndex = state.findIndex(cartItem => cartItem.id === action.payload.id);
-      state.splice(itemIndex, 1);
-      const updatedState = Object.assign([], state);
-      return updatedState;
+      const itemIndexToRemove = state.findIndex(cartItem => cartItem.id === action.payload.id);
+      const resultArray = [...state.slice(0, itemIndexToRemove), ...state.slice(itemIndexToRemove + 1)];
+      return resultArray;
     }
     return state;
 };
