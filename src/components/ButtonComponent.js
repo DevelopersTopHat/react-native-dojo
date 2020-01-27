@@ -8,20 +8,25 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 // Fill out the return for exercise 1
 const ButtonComponent = props => {
   return (
-    <>
-    </>
+    <View style={styles.container}>
+      <Icon
+        onPress={() => {
+          if (props.cartItems.length > 0) {
+            props.onPressRemove(props.item);
+          }
+        }}
+        name="remove-circle"
+        size={30}
+      />
+      <Icon
+        onPress={() => props.onPressAdd(props.item)}
+        name="add-circle"
+        size={30}
+      />
+    </View>
   );
 };
 
-// Needed for exercise 2
-const mapStateToProps = state => {
-  return {
-    cartItems: state,
-  };
-};
+export default ButtonComponent;
 
-export default connect(mapStateToProps)(ButtonComponent);
-
-const styles = StyleSheet.create({
-  
-});
+const styles = StyleSheet.create({});
