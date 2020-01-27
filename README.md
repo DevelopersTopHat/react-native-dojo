@@ -47,11 +47,13 @@ For Android:
 react-native run-android
 `
 
-For iOS:
+For iOS:how
 
 `
 react-native run-ios
 `
+
+Note: depending on how node is installed on your machine, you may need to add npx before the command.
 
 ###### Exercise 2: Make the Button Component
 
@@ -86,10 +88,7 @@ Each of these HTML-like tags translates to a widget that in iOS and Android. Sim
 ```
 
 1. For this exercise, try making a button component that adds 2 buttons using icons from react-native-vector-icons that look something like this:
-
-<img src="docs/images/button_component.png" width="250" height="250">
+![Screenshot of product tile with buttons](docs/images/button_component.png)
 
 https://github.com/oblador/react-native-vector-icons
-Material icons have already been installed in this dojo project, so it is reccommended that those are used.
-
-2. Put that button component on the product tile.
+Material icons have already been installed in this dojo project, so it is reccommended that those are used. React native vector icons have an onPress prop, so using buttons or touchable components are not neccessary for this exercise.
