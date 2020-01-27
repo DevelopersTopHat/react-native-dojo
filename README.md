@@ -11,6 +11,8 @@
 
 For this dojo, we will be completing the features of a simple shopping cart application, built with React Native and Redux. The goal of the dojo is to get people more comfortable with working with mobile and React Native, Redux is simply there to make managing states easier. One of the exercises will require writing the logic of a Redux reducer, however the goal will not be to use redux best practices, but instead just manipulate the state to make to do what you want.
 
+This dojo is intended for those who have a basic understanding of React or greater. However, the dojo supporters will do their best to help those using React/React-Native for the first time.
+
 ## Installation of the Dojo Project
 
 Note: The installation steps are different depending on the laptop OS and the phone OS, so you will need to follow the steps in the getting started docs. Please also install yarn as that will be the package manager of choice for this dojo.
@@ -55,4 +57,38 @@ react-native run-ios
 
 This is the core exercise to get you started with React Native, if you know how to make components, you know how to make React Native apps.
 
-In React Native
+In React Native, JSX uses React elements that translate to native components. for example:
+
+ ```html
+    <TouchableOpacity
+      onPress={() => {}}
+      style={styles.button}>
+      <View style={styles.textContainer}>
+        <Text style={styles.textContent}>{props.content}</Text>
+      </View>
+    </TouchableOpacity>
+```
+
+Each of these HTML-like tags translates to a widget that in iOS and Android. Similar to React, these components has props (properties) that can give you control of what they do. Most components have a style property which allows you to change how it looks. Styles in React Native are similar to CSS, however, a lot of stylings available in CSS are not available in React Native. inversely there are a few styles available for React Native that are not available in CSS such as marginVertical.
+
+ ```html
+  const styles = StyleSheet.create({
+  button: {
+    height: 30,
+    width: 30,
+    borderRadius: 15,
+    backgroundColor: 'blue',
+  },
+  textContainer: { },
+  textContent: { },
+});
+
+```
+
+1. For this exercise, try making a button component that adds 2 buttons using icons from react-native-vector-icons that look something like this:
+![Screenshot of product tile with buttons](docs/images/button_component.png)
+
+https://github.com/oblador/react-native-vector-icons
+Material icons have already been installed in this dojo project, so it is reccommended that those are used.
+
+2. Put that button component on the product tile.
