@@ -53,7 +53,7 @@ For iOS:how
 react-native run-ios
 `
 
-Note: depending on how node is installed on your machine, you may need to add npx before the command.
+Note: depending on how node is installed on your machine, you may need to add **npx** before the command.
 
 ###### Exercise 2: Make the Button Component
 
@@ -93,3 +93,12 @@ Each of these HTML-like tags translates to a widget that in iOS and Android. Sim
 
 https://github.com/oblador/react-native-vector-icons
 Material icons have already been installed in this dojo project, so it is reccommended that those are used. React native vector icons have an onPress prop, so using buttons or touchable components are not neccessary for this exercise.
+
+###### Exercise 3: Give Logic to the Buttons
+
+This is where the Redux portion of the dojo comes in, so part of this is not mandatory.
+As part of this exercise you will be filling in the logic of the reducer so that the shopping cart gets populated when items are added to the reducer.
+
+1. Fill in the logic for the ADD_TO_CART case so that the state array has the newly added item from the payload.
+
+2. Add the onPress functionality to the plus button so that when you press it, it calls the reducer with the ADD_TO_CART action.
