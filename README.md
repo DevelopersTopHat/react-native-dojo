@@ -88,6 +88,8 @@ Each of these HTML-like tags translates to a widget that in iOS and Android. Sim
 1. For this exercise, try making a button component that adds 2 buttons using icons from react-native-vector-icons that look something like this:
 ![Screenshot of product tile with buttons](docs/images/button_component.png)
 
+<img src="docs/images/button_component.png" width="250" height="250">
+
 https://github.com/oblador/react-native-vector-icons
 Material icons have already been installed in this dojo project, so it is reccommended that those are used.
 
