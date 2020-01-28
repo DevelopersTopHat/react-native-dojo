@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {createStackNavigator} from 'react-navigation';
 
-import HomeScreen from './src/screens/HomeScreen';
-import CartScreen from './src/screens/CartScreen';
-import ShoppingCartIcon from './src/components/ShoppingCartIcon';
+import HomeScreen from './screens/HomeScreen';
+import CartScreen from './screens/CartScreen';
+import ShoppingCartIcon from './components/ShoppingCartIcon';
 
 export default class ShoppingCart extends Component {
   render() {

@@ -11,12 +11,10 @@ import {
   StyleSheet,
   View,
   Text,
-  TouchableOpacity,
   Image,
   ScrollView,
 } from 'react-native';
 import ButtonComponent from './ButtonComponent';
-import {connect} from 'react-redux';
 class ProductCatalog extends Component {
   constructor(props) {
     super(props);
@@ -55,13 +53,6 @@ class ProductCatalog extends Component {
     );
   }
 }
-
-const mapDispatchToProps = dispatch => {
-  return {
-    addItemToCart: product => dispatch({type: ADD_TO_CART, payload: product}),
-    removeItemFromCart: product => dispatch({type: REMOVE_FROM_CART, payload: product})
-  };
-};
 
 export default ProductCatalog;
 

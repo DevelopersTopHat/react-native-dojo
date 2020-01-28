@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 
-import ShoppingCart from './ShoppingCart';
+import ShoppingCart from './src/ShoppingCart';
 import {Provider} from 'react-redux';
 import store from './src/store';
 export default class App extends Component {
