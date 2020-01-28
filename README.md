@@ -97,8 +97,12 @@ Material icons have already been installed in this dojo project, so it is reccom
 ###### Exercise 3: Give Logic to the Buttons
 
 This is where the Redux portion of the dojo comes in, so part of this is not mandatory.
-As part of this exercise you will be filling in the logic of the reducer so that the shopping cart gets populated when items are added to the reducer.
+As part of this exercise you will be filling in the logic of the reducer so that the shopping cart gets populated when items are added to the reducer. For this portion of the dojo unless you have experience with React and Redux, we will not ask you to follow best practices for Redux, and will allow you to put conditional logic in your reducer for simplicity.
+
+Note: Redux assumes that you will not recognize mutations to the state array, so keep that in mind when writing the logic.
 
 1. Fill in the logic for the ADD_TO_CART case so that the state array has the newly added item from the payload.
 
 2. Add the onPress functionality to the plus button so that when you press it, it calls the reducer with the ADD_TO_CART action.
+
+3. (Optional) Add the onPress functionality for the remove from cart button.
