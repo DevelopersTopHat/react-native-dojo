@@ -115,3 +115,16 @@ React Native is very simple if you are already familiar with React and Redux. Th
 As a bonus challenge, if you have completed the above exercises, make a checkout screen using React Native in Redux.
 
 The only specifications for the screen are that it must sum all of the dollar values for each items in the shopping cart. Good luck, and we hope you enjoyed! If you want an example of how the navigation was done in this app, take a look at the ShoppingCart.js in the src directory and the ShoppingCartIcon.js in the components directory.
+
+##### Aditional resources
+
+If you are interested in what the best practices for redux are, take a look here 
+https://redux.js.org/style-guide/style-guide/
+
+If you are curious as to how you might handle the case of not using conditional logic in the reducer, here are some options outlined in a stack overflow post 
+https://stackoverflow.com/questions/53057531/can-i-use-condition-in-my-action-reducer
+
+Here are some more references to shopping cart apps built in React Native 
+https://codeburst.io/e-commerce-mobile-shop-with-react-native-and-redux-623e829db967
+http://nobrok.com/category/shopping-cart-app/
+https://blog.nativebase.io/react-native-e-commerce-starter-to-build-your-e-commerce-app-532ef626b913
