@@ -1,12 +1,11 @@
 /**
  * For the sake of simplicity, we are going to be using static data for this dojo.
  */
-
 class DataService {
   constructor() {}
 
   getElectronicProducts = async () => {
-    return electronics;
+    return new Promise.resolve(electronics);
   };
 }
 
