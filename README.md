@@ -106,3 +106,12 @@ Note: Redux assumes that you will not recognize mutations to the state array, so
 2. Add the onPress functionality to the plus button so that when you press it, it calls the reducer with the ADD_TO_CART action.
 
 3. (Optional) Add the onPress functionality for the remove from cart button.
+
+
+###### Bonus Challenge: Make a checkout screen
+
+React Native is very simple if you are already familiar with React and Redux. The only additional knowledge required to make React Native apps if you are familiar with the former is to know how JSX translates to native components, using 3rd party libraries in your React Native apps, and the additional operations requirements for native development.
+
+As a bonus challenge, if you have completed the above exercises, make a checkout screen using React Native in Redux.
+
+The only specifications for the screen are that it must sum all of the dollar values for each items in the shopping cart. Good luck, and we hope you enjoyed! If you want an example of how the navigation was done in this app, take a look at the ShoppingCart.js in the src directory and the ShoppingCartIcon.js in the components directory.
