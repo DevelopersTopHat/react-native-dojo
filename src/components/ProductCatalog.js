@@ -11,12 +11,10 @@ import {
   StyleSheet,
   View,
   Text,
-  TouchableOpacity,
   Image,
   ScrollView,
 } from 'react-native';
 import ButtonComponent from './ButtonComponent';
-import {connect} from 'react-redux';
 class ProductCatalog extends Component {
   constructor(props) {
     super(props);
@@ -55,8 +53,6 @@ class ProductCatalog extends Component {
     );
   }
 }
-
-
 
 export default ProductCatalog;
 
