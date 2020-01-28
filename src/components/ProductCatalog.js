@@ -56,7 +56,12 @@ class ProductCatalog extends Component {
   }
 }
 
-
+const mapDispatchToProps = dispatch => {
+  return {
+    addItemToCart: product => dispatch({type: ADD_TO_CART, payload: product}),
+    removeItemFromCart: product => dispatch({type: REMOVE_FROM_CART, payload: product})
+  };
+};
 
 export default ProductCatalog;
 
