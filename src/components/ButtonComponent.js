@@ -1,7 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-
-import {connect} from 'react-redux';
+import {View, StyleSheet} from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -10,9 +8,7 @@ const ButtonComponent = props => {
     <View style={styles.container}>
       <Icon
         onPress={() => {
-          if (props.cartItems.length > 0) {
-            props.onPressRemove(props.item);
-          }
+          props.onPressRemove(props.item);
         }}
         name="remove-circle"
         size={30}
@@ -26,13 +22,7 @@ const ButtonComponent = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    cartItems: state,
-  };
-};
-
-export default connect(mapStateToProps)(ButtonComponent);
+export default ButtonComponent;
 
 const styles = StyleSheet.create({
   container: {
