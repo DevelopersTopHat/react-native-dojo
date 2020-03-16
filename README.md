@@ -1,3 +1,4 @@
+
 # Slalom's React-Native Dojo!
 
 ## TODO-List
@@ -84,7 +85,7 @@ Each of these HTML-like tags translates to a widget that is in iOS and Android. 
   textContainer: { },
   textContent: { },
 });
-
+```
 1. For this exercise, try making a button component that adds 2 buttons using icons from react-native-vector-icons that look something like this:
 
 <img src="docs/images/button_component.png" width="250" height="250">
@@ -96,11 +97,11 @@ Each of these HTML-like tags translates to a widget that is in iOS and Android. 
   ```html
 const ButtonComponent = props => {
   return (
-   <View>
-     <Icon/>
-     <Icon/>
-   </View>
-  );
+	   <View>
+	     <Icon/>
+	     <Icon/>
+	   </View>
+	);
 };
 ```
 
