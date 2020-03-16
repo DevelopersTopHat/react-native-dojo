@@ -71,7 +71,7 @@ In React Native, JSX uses React elements that translate to native components. fo
     </TouchableOpacity>
 ```
 
-Each of these HTML-like tags translates to a widget that in iOS and Android. Similar to React, these components has props (properties) that can give you control of what they do. Most components have a style property which allows you to change how it looks. Styles in React Native are similar to CSS, however, a lot of stylings available in CSS are not available in React Native. inversely there are a few styles available for React Native that are not available in CSS such as marginVertical.
+Each of these HTML-like tags translates to a widget that is in iOS and Android. Similar to React, these components have props (properties) that can give you control of what they do. Most components have a style property which allows you to change how it looks. Styles in React Native are similar to CSS, however, a lot of stylings available in CSS are not available in React Native. Inversely there are a few styles available for React Native that are not available in CSS such as marginVertical.
 
  ```html
   const styles = StyleSheet.create({
@@ -85,11 +85,30 @@ Each of these HTML-like tags translates to a widget that in iOS and Android. Sim
   textContent: { },
 });
 
-```
-
 1. For this exercise, try making a button component that adds 2 buttons using icons from react-native-vector-icons that look something like this:
 
 <img src="docs/images/button_component.png" width="250" height="250">
+
+2. The file you will make your changes to is src/components/ButtonComponent.js where you will add the <Icon> component that is going to represent your button.
+ 
+3. Each component can only return one piece of JSX. That means you will need to wrap all sub elements in a parent element like:
+
+  ```html
+const ButtonComponent = props => {
+  return (
+   <View>
+     <Icon/>
+     <Icon/>
+   </View>
+  );
+};
+```
+
+4. The methods for adding and removing items are available in the props. The logic for the buttons has not been implemented yet, since that is the next exercise! The methods do need to be passed the item to add/remove like this:
+
+```
+props.onPressAdd(props.item)
+```
 
 https://github.com/oblador/react-native-vector-icons
 Material icons have already been installed in this dojo project, so it is reccommended that those are used. React native vector icons have an onPress prop, so using buttons or touchable components are not neccessary for this exercise.
