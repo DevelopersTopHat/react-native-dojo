@@ -16,7 +16,7 @@ import {ADD_TO_CART, REMOVE_FROM_CART} from '../reducers/types';
 class HomeScreen extends Component {
   static navigationOptions = {
     headerTitleContainerStyle: {
-      right: 0, // THIS RIGHT HERE
+      right: 0, // there is no back button on this screen, so this helps center the title
     },
   };
   constructor(props) {
