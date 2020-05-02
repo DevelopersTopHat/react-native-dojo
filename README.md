@@ -92,9 +92,7 @@ For Android:
   
 
 `
-
 npx react-native run-android
-
 `
 
   
@@ -104,9 +102,7 @@ For iOS:how
   
 
 `
-
 npx react-native run-ios
-
 `
 
   
