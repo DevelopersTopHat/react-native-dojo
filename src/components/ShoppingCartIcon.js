@@ -14,7 +14,7 @@ const ShoppingCartIcon = props => {
       <View style={styles.itemCountContainer}>
         <Text style={styles.itemCount}>{props.cartItems.length}</Text>
       </View>
-      <Icon name="shopping-cart" size={30} />
+      <Icon name="shopping-cart" size={30} color="#E2E2E2" />
     </TouchableOpacity>
   );
 };
@@ -39,14 +39,14 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30,
     borderRadius: 15,
-    backgroundColor: 'blue',
-    opacity: 0.7,
+    backgroundColor: '#332940',
+    opacity: 0.9,
     right: 30,
     alignItems: 'center',
     justifyContent: 'center',
   },
   itemCount: {
-    color: 'white',
+    color: '#E2E2E2',
     fontWeight: 'bold',
     fontSize: 18,
   },
