@@ -18,7 +18,7 @@ This dojo is intended for those who have a basic understanding of React or great
 
 Note: The installation steps are different depending on the laptop OS and the phone OS, so you will need to follow the steps in the getting started docs. Please also install yarn as that will be the package manager of choice for this dojo.
 https://yarnpkg.com/en/docs/install
-https://facebook.github.io/react-native/docs/getting-started
+https://reactnative.dev/docs/environment-setup
 
 Running an application is different depending on if you use a physical device, or a virtual one. The pre-requisites for using a virtual device are having either XCode or Android Studio installed if you are using MacOS, or Android Studio if you are using Windows. Virtualization needs to be enabled on your computer if you want to use a simulator.
 
@@ -45,13 +45,13 @@ For MacOS you may need to also do this:
 For Android:
 
 `
-react-native run-android
+npx react-native run-android
 `
 
 For iOS:how
 
 `
-react-native run-ios
+npx react-native run-ios
 `
 
 Note: depending on how node is installed on your machine, you may need to add **npx** before the command.
@@ -137,6 +137,8 @@ As a bonus challenge, if you have completed the above exercises, make a checkout
 The only specifications for the screen are that it must sum all of the dollar values for each items in the shopping cart. Good luck, and we hope you enjoyed! If you want an example of how the navigation was done in this app, take a look at the ShoppingCart.js in the src directory and the ShoppingCartIcon.js in the components directory.
 
 ##### Aditional resources
+
+https://facebook.github.io/react-native/docs/getting-started
 
 If you are interested in what the best practices for redux are, take a look here 
 https://redux.js.org/style-guide/style-guide/

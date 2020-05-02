@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {createStackNavigator} from 'react-navigation';
+import {View} from 'react-native';
 
 import HomeScreen from './screens/HomeScreen';
 import CartScreen from './screens/CartScreen';
@@ -20,6 +21,15 @@ const AppStackNavigator = createStackNavigator(
     navigationOptions: {
       headerTitle: 'Shopping App',
       headerRight: <ShoppingCartIcon />,
+      headerTintColor: '#E2E2E2',
+      headerStyle: { 
+        backgroundColor: '#1F1F1F'
+      },
+      headerTitleStyle: { 
+        color: '#E2E2E2',
+        textAlign: 'center',
+        flex: 1
+      },
     },
   },
 );

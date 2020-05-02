@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     alignItems: 'center',
-    backgroundColor: '#FAEED4',
+    backgroundColor: '#121212',
   },
   itemContainer: {
     marginVertical: 20,
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   item: {
     padding: 10,
     marginVertical: 10,
-    backgroundColor: 'rgba(250, 128, 123, 0.5)',
+    backgroundColor: '#1F1F1F',
     width: '100%',
   },
   itemImage: {
@@ -87,5 +87,7 @@ const styles = StyleSheet.create({
   },
   itemText: {
     fontSize: 18,
+    color: "#E2E2E2",
+    textAlign: "center"
   },
 });

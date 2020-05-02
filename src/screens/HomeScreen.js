@@ -14,6 +14,11 @@ import {connect} from 'react-redux';
 import DataService from '../services/DataService';
 import {ADD_TO_CART, REMOVE_FROM_CART} from '../reducers/types';
 class HomeScreen extends Component {
+  static navigationOptions = {
+    headerTitleContainerStyle: {
+      right: 0, // THIS RIGHT HERE
+    },
+  };
   constructor(props) {
     super(props);
     this.state = {
