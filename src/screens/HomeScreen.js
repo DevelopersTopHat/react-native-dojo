@@ -19,6 +19,7 @@ class HomeScreen extends Component {
       right: 0, // there is no back button on this screen, so this helps center the title
     },
   };
+  
   constructor(props) {
     super(props);
     this.state = {
