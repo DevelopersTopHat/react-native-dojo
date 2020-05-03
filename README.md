@@ -55,11 +55,11 @@ You will also need an IDE to edit your code in. VSCode is the recommended IDE fo
 
   
 
-#### Exercises to Complete
+## Exercises to Complete
 
   
 
-###### Exercise 1: Setup the Project
+#### Exercise 1: Setup the Project
 
   
 
@@ -107,11 +107,11 @@ npx react-native run-ios
 
   
 
-Note: depending on how node is installed on your machine, you may need to add **npx** before the command.
+Note: in order for the React Native project commands to be run irrespective of the version of the React Native CLI the keyword **npx** must be run before the command.
 
   
 
-###### Exercise 2: Make the Button Component
+#### Exercise 2: Make the Button Component
 
   
 
@@ -139,20 +139,15 @@ Each of these HTML-like tags translates to a widget that is in iOS and Android. 
 
 ```html
 const styles = StyleSheet.create({
-
 button: {
 	height: 30,
 	width: 30,
 	borderRadius: 15,
 	backgroundColor: 'blue',
 },
-
 textContainer: { },
-
 textContent: { },
-
 });
-
 ```
 
 1. For this exercise, try making a button component that adds 2 buttons using icons from react-native-vector-icons that look something like this:
@@ -165,7 +160,7 @@ textContent: { },
 
 2. The file you will make your changes to is src/components/ButtonComponent.js where you will add the \<Icon> component that is going to represent your button.
 
-	2.a The \<Icon> component is a third party component that has its own unique props. The props that you will want to use to select what it displays is the "name" property. For the image above I used the "add" and "remove" names like so, but you can always check .  
+	2.a The \<Icon> component is a third party component that has its own unique props. The props that you will want to use to select what it displays is the "name" property. For the image above I used the "add" and "remove" names like so, but if you want to use your own, you can take a look at your options here https://material.io/resources/icons/?style=baseline.
 	```html
 	<Icon name="add"/>
 	```
@@ -184,7 +179,6 @@ textContent: { },
   
 
 ```html
-
 const ButtonComponent = props => {
 return (
 	<View>
@@ -193,7 +187,6 @@ return (
 	</View>
 	);
 };
-
 ```
 
   
@@ -203,9 +196,7 @@ return (
   
 
 ```
-
 props.onPressAdd(props.item)
-
 ```
 
   
@@ -216,34 +207,48 @@ Material icons have already been installed in this dojo project, so it is reccom
 
   
 
-###### Exercise 3: Give Logic to the Buttons
+#### Exercise 3: Give Logic to the Buttons
 
   
 
-This is where the Redux portion of the dojo comes in, so part of this is not mandatory.
+This is where the Redux portion of the dojo comes in, so part of this is not mandatory. Most of the setup required to use Redux in the React Native project is already added.
 
 As part of this exercise you will be filling in the logic of the reducer so that the shopping cart gets populated when items are added to the reducer. For this portion of the dojo unless you have experience with React and Redux, we will not ask you to follow best practices for Redux, and will allow you to put conditional logic in your reducer for simplicity.
 
   
 
-Note: Redux assumes that you will not recognize mutations to the state array, so keep that in mind when writing the logic.
+Note: Redux assumes that you will not mutate the state array, and will thus recognize them, so keep that in mind when writing the logic for the reducer.
 
   
 
-1. Fill in the logic for the ADD_TO_CART case so that the state array has the newly added item from the payload.
+1. Fill in the logic for the ADD_TO_CART case in the Reducer so that the state array has the newly added item from the payload.
+	
+	1.a You can find the reducer with the ADD_TO_CART case in reducers/cartItems.js
+	
+	1.b The item being passed in the button press is contained within the action parameter in the field payload. You can access the value like so:
+	```html
+let selectedItem = action.payload;
+```
+1.c State array mutation will not propogate the change to all components, so doing something like state.push(action.payload) will not update the item count for the shopping cart in the home screen (on the cart screen you will see your items and the item count). You can get around the immutability issue by returning a new array like so:
+```html
+let updatedCartItemList = [...state, action.payload];
+```
+  
+
+2. Add the onPress functionality to the plus button so that when you press it, it calls the reducer with the ADD_TO_CART action. You can reference part 4 of the button component section to see how to call the redux function.
 
   
 
-2. Add the onPress functionality to the plus button so that when you press it, it calls the reducer with the ADD_TO_CART action.
+3. (Optional) Add the reducer functionality for the remove from cart button.
+
+	3a. Similar to the the add to cart functionality, you will simply need to add the logic that supports removing items to the reducer. You can treat the state array as the shopping cart contents, and you can treat the action.payload as the item to be removed from the state array.
+	
+	3b. You must handle the situation where if the item doesn't exist in the cart, and the remove from cart button is hit, the button should not do anything.
 
   
-
-3. (Optional) Add the onPress functionality for the remove from cart button.
-
-  
   
 
-###### Bonus Challenge: Make a checkout screen
+#### Bonus Challenge: Make a checkout screen
 
   
 
