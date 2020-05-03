@@ -226,10 +226,12 @@ Note: Redux assumes that you will not mutate the state array, and will thus reco
 	1.a You can find the reducer with the ADD_TO_CART case in reducers/cartItems.js
 	
 	1.b The item being passed in the button press is contained within the action parameter in the field payload. You can access the value like so:
-	```html
+	
+```html
 let selectedItem = action.payload;
 ```
 1.c State array mutation will not propogate the change to all components, so doing something like state.push(action.payload) will not update the item count for the shopping cart in the home screen (on the cart screen you will see your items and the item count). You can get around the immutability issue by returning a new array like so:
+
 ```html
 let updatedCartItemList = [...state, action.payload];
 ```
@@ -238,7 +240,6 @@ let updatedCartItemList = [...state, action.payload];
 2. Add the onPress functionality to the plus button so that when you press it, it calls the reducer with the ADD_TO_CART action. You can reference part 4 of the button component section to see how to call the redux function.
 
   
-
 3. (Optional) Add the reducer functionality for the remove from cart button.
 
 	3a. Similar to the the add to cart functionality, you will simply need to add the logic that supports removing items to the reducer. You can treat the state array as the shopping cart contents, and you can treat the action.payload as the item to be removed from the state array.
