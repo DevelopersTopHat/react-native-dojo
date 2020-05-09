@@ -24,6 +24,8 @@ class ProductCatalog extends Component {
     super(props);
   }
 
+  // this function showcases the ability to call a function in the parent component from child component
+  // by passing the function as a prop
   displayToast = () => {
     Toast.show('Image pressed!');
   };
