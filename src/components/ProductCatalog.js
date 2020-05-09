@@ -13,8 +13,10 @@ import {
   Text,
   Image,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import ButtonComponent from './ButtonComponent';
+import ExpandingTile from './ExpandingTile';
 class ProductCatalog extends Component {
   constructor(props) {
     super(props);
@@ -25,12 +27,7 @@ class ProductCatalog extends Component {
       return (
         <View key={index} style={styles.item}>
           <Text style={styles.itemText}>{item.name + ' - $' + item.price}</Text>
-          <Image
-            style={styles.itemImage}
-            source={{
-              uri: item.image,
-            }}
-          />
+          <ExpandingTile description={item.description} image={item.image} />
           <ButtonComponent
             item={item}
             onPressAdd={this.props.onPressAdd}
@@ -78,16 +75,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#1F1F1F',
     width: '100%',
   },
-  itemImage: {
-    width: '90%',
-    height: undefined,
-    aspectRatio: 1,
-    alignSelf: 'center',
-    marginVertical: 8,
-  },
   itemText: {
     fontSize: 18,
-    color: "#E2E2E2",
-    textAlign: "center"
+    color: '#E2E2E2',
+    textAlign: 'center',
   },
 });

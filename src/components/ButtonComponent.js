@@ -7,8 +7,24 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 const ButtonComponent = props => {
   return (
     <View style={styles.buttonContainer}>
-      <Icon name="remove" size={30} color="white" onPress={() => {props.onPressRemove(props.item)}} style={styles.button} />
-      <Icon name="add" size={30} color="white" onPress={() => {props.onPressAdd(props.item)}} style={styles.button} />
+      <Icon
+        name="remove"
+        size={30}
+        color="white"
+        onPress={() => {
+          props.onPressRemove(props.item);
+        }}
+        style={styles.button}
+      />
+      <Icon
+        name="add"
+        size={30}
+        color="white"
+        onPress={() => {
+          props.onPressAdd(props.item);
+        }}
+        style={styles.button}
+      />
     </View>
   );
 };
@@ -17,13 +33,13 @@ export default ButtonComponent;
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    width: "100%",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between"
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   button: {
-    backgroundColor: "#005457",
-    borderRadius: 150
-  }
+    backgroundColor: '#005457',
+    borderRadius: 150,
+  },
 });
