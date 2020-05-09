@@ -13,24 +13,29 @@ import {
   Text,
   Image,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
+import Toast from 'react-native-simple-toast';
+
 import ButtonComponent from './ButtonComponent';
+import ExpandingTile from './ExpandingTile';
 class ProductCatalog extends Component {
   constructor(props) {
     super(props);
   }
+
+  // this function showcases the ability to call a function in the parent component from child component
+  // by passing the function as a prop
+  displayToast = () => {
+    Toast.show('Image pressed!');
+  };
 
   renderProducts = products => {
     return products.map((item, index) => {
       return (
         <View key={index} style={styles.item}>
           <Text style={styles.itemText}>{item.name + ' - $' + item.price}</Text>
-          <Image
-            style={styles.itemImage}
-            source={{
-              uri: item.image,
-            }}
-          />
+          <ExpandingTile description={item.description} image={item.image} toast={this.displayToast} />
           <ButtonComponent
             item={item}
             onPressAdd={this.props.onPressAdd}
@@ -78,16 +83,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#1F1F1F',
     width: '100%',
   },
-  itemImage: {
-    width: '90%',
-    height: undefined,
-    aspectRatio: 1,
-    alignSelf: 'center',
-    marginVertical: 8,
-  },
   itemText: {
     fontSize: 18,
-    color: "#E2E2E2",
-    textAlign: "center"
+    color: '#E2E2E2',
+    textAlign: 'center',
   },
 });
