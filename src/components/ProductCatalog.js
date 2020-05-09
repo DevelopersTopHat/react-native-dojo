@@ -15,6 +15,8 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
+import Toast from 'react-native-simple-toast';
+
 import ButtonComponent from './ButtonComponent';
 import ExpandingTile from './ExpandingTile';
 class ProductCatalog extends Component {
@@ -22,12 +24,16 @@ class ProductCatalog extends Component {
     super(props);
   }
 
+  displayToast = () => {
+    Toast.show('Image pressed!');
+  };
+
   renderProducts = products => {
     return products.map((item, index) => {
       return (
         <View key={index} style={styles.item}>
           <Text style={styles.itemText}>{item.name + ' - $' + item.price}</Text>
-          <ExpandingTile description={item.description} image={item.image} />
+          <ExpandingTile description={item.description} image={item.image} toast={this.displayToast} />
           <ButtonComponent
             item={item}
             onPressAdd={this.props.onPressAdd}
