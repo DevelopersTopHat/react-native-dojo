@@ -164,11 +164,12 @@ textContent: { },
 	```html
 	<Icon name="add"/>
 	```
-	2.b When you add functionality to the \<Icon> component, you will be utilizing its onPress prop. The onPress prop accepts a function as an argument which for simplicity you can do like this:
+	2.b When you add functionality to the \<Icon> component, you will be utilizing its onPress prop. The onPress prop accepts a function as an argument which for simplicity you can do like this
 	
 	```html
 	<Icon onPress={() => {}} />
 	```
+
 	2.c Similarly to being able to add functionality to the component through its props, you can also style it! The \<Icon> component supports the size, color and the style tags, which you can use to modify how the icon looks.
 	```html
 	<Icon size={30} color="white" style={styles.button} />
@@ -191,15 +192,10 @@ return (
 
   
 
-4. The methods for adding and removing items are available in the props. The logic for the buttons has not been implemented yet, since that is the next exercise! The methods do need to be passed the item to add/remove like this:
-
-  
-
+4. We are instantiating this button Component inside the ProductCatalog component.The methods for adding and removing items are passed in to button Component as a prop and once called will dispatch an action called "ADD_TO_CART". The logic for handling this action is not implemented yet, since that is the next exercise! The methods do need to be passed the item to add/remove like this:
 ```
 props.onPressAdd(props.item)
 ```
-
-  
 
 https://github.com/oblador/react-native-vector-icons
 
@@ -209,9 +205,7 @@ Material icons have already been installed in this dojo project, so it is reccom
 
 #### Exercise 3: Give Logic to the Buttons
 
-  
-
-This is where the Redux portion of the dojo comes in, so part of this is not mandatory. Most of the setup required to use Redux in the React Native project is already added.
+This is where the Redux portion of the dojo comes in. Most of the setup required to use Redux in the React Native project is already added.
 
 As part of this exercise you will be filling in the logic of the reducer so that the shopping cart gets populated when items are added to the reducer. For this portion of the dojo unless you have experience with React and Redux, we will not ask you to follow best practices for Redux, and will allow you to put conditional logic in your reducer for simplicity.
 
@@ -237,7 +231,7 @@ let updatedCartItemList = [...state, action.payload];
 ```
   
 
-2. Add the onPress functionality to the plus button so that when you press it, it calls the reducer with the ADD_TO_CART action. You can reference part 4 of the button component section to see how to call the redux function.
+2. Add the onPress functionality to the plus button so that when you press it, it calls the reducer with the ADD_TO_CART action. You should have already done this in step 4 of Excersise 2.
 
   
 3. (Optional) Add the reducer functionality for the remove from cart button.
@@ -247,7 +241,11 @@ let updatedCartItemList = [...state, action.payload];
 	3b. You must handle the situation where if the item doesn't exist in the cart, and the remove from cart button is hit, the button should not do anything.
 
   
-  
+#### Exercise 4: Add an Expanding Title to Product Catalog
+The goal of this exercise is to add another feature and learn about some react fundamentals. This simple feature should have the following functionality: When an item image is pressed, it expands to include a description of the item, and calls a function in the parent component that makes a toast appear. We already built the fucntionality to expand the image and show its description, what's left is to make a toast appear. 
+1. Navigate to Product Catalog and you'll notice that ExpandingTile Component is being used here. We have a function here as well called "DisplayToast".
+2. Navigate to ExpandingTitle Component and take a look at "onPress" function which is part of TouchableOpacity. Here is where a call to "DisplayToast" should be made.
+3. Hint: You can pass "DisplayToast" as a prop to this Component and capture it there
 
 #### Bonus Challenge: Make a checkout screen
 

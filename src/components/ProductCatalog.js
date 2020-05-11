@@ -26,8 +26,8 @@ class ProductCatalog extends Component {
 
   // this function showcases the ability to call a function in the parent component from child component
   // by passing the function as a prop
-  displayToast = () => {
-    Toast.show('Image pressed!');
+  displayToast = (message) => {
+    Toast.show(message);
   };
 
   renderProducts = products => {
@@ -35,7 +35,7 @@ class ProductCatalog extends Component {
       return (
         <View key={index} style={styles.item}>
           <Text style={styles.itemText}>{item.name + ' - $' + item.price}</Text>
-          <ExpandingTile description={item.description} image={item.image} toast={this.displayToast} />
+          <ExpandingTile description={item.description} name={item.name} image={item.image} />
           <ButtonComponent
             item={item}
             onPressAdd={this.props.onPressAdd}

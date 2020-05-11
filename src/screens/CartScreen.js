@@ -18,13 +18,6 @@ class CartScreen extends Component {
   render() {
     return (
       <View>
-        {this.props.cartItems.length > 0 && (
-          <ProductCatalog
-            onPressAdd={this.props.addItemToCart}
-            onPressRemove={this.props.removeItemFromCart}
-            products={this.props.cartItems}
-          />
-        )}
       </View>
     );
   }
@@ -32,14 +25,12 @@ class CartScreen extends Component {
 
 const mapStateToProps = state => {
   return {
-    cartItems: state,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    addItemToCart: product => dispatch({type: ADD_TO_CART, payload: product}),
-    removeItemFromCart: product => dispatch({type: REMOVE_FROM_CART, payload: product})
+
   };
 };
 

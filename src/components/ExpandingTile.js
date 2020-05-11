@@ -16,7 +16,7 @@ class ExpandingTile extends Component {
       expanded: false,
       description: props.description,
       image: props.image,
-      parentToast: props.toast
+      name: props.name
     };
   }
 
@@ -25,12 +25,11 @@ class ExpandingTile extends Component {
   };
 
   render() {
-    const {expanded, description, image, parentToast} = this.state;
+    const {expanded, description, image, name} = this.state;
     return (
       <TouchableOpacity
         onPress={() => {
           this.toggleDescriptionDisplay();
-          parentToast();
         }}>
         <Image
           style={styles.itemImage}

@@ -32,11 +32,6 @@ class HomeScreen extends Component {
       <>
         {this.state.products && (
           <View>
-            <ProductCatalog
-              onPressAdd={this.props.addItemToCart}
-              onPressRemove={this.props.removeItemFromCart}
-              products={this.state.products}
-            />
           </View>
         )}
       </>
