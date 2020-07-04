@@ -3,39 +3,15 @@
 
 # Slalom's React-Native Dojo!
 
-  
-
-## TODO-List
-
-  
-
-5. Take screenshots of the various screens reached during installation
-
-6. Make pull request for each of the feature implementations for the dojo.
-
-8. Outline bonus challenge task.
-
-9. Provide additional learning resources.
-
-  
-
 ## Project Description
 
-  
-
-For this dojo, we will be completing the features of a simple shopping cart application, built with React Native and Redux. The goal of the dojo is to get people more comfortable with working with mobile and React Native, Redux is simply there to make managing states easier. One of the exercises will require writing the logic of a Redux reducer, however the goal will not be to use redux best practices, but instead just manipulate the state to make to do what you want.
-
-  
+For this dojo, we will be completing the features of a simple shopping cart application, built with React Native and Redux. The goal of the dojo is to get people more comfortable with working with mobile and React Native; Redux is simply there to introduce an alternative method for managing states. One of the exercises will require writing the logic of a Redux reducer, however the goal will not be to use redux best practices, but instead just manipulate the state to make to do what you want.
 
 This dojo is intended for those who have a basic understanding of React or greater. However, the dojo supporters will do their best to help those using React/React-Native for the first time.
 
-  
-
 ## Installation of the Dojo Project
 
-  
-
-Note: The installation steps are different depending on the laptop OS and the phone OS, so you will need to follow the steps in the getting started docs. Please also install yarn as that will be the package manager of choice for this dojo.
+Note: The installation steps are different depending on the laptop OS and the phone OS, so you will need to follow the steps in the getting started docs. Also consider installing yarn as that will be the package manager of choice for this dojo.
 
 https://yarnpkg.com/en/docs/install
 
@@ -109,19 +85,76 @@ npx react-native run-ios
 
 Note: in order for the React Native project commands to be run irrespective of the version of the React Native CLI the keyword **npx** must be run before the command.
 
-  
+Sometimes the metro server will fail to run with an error in the console. This is usually caused by a broken version of NodeJS, and can be permanently fixed by switching to a version that doesn't throw that error :). If you aren't in the mood change Node versions this is a temporary fix https://stackoverflow.com/questions/58120990/how-to-resolve-the-error-on-react-native-start  
 
-#### Exercise 2: Make the Button Component
 
+#### Exercise 2: Make the Expanding Tile Component
   
+A lot of the advantages of React Native come from the fact that it is written with JavaScript, which means you can take advantage of the expansive list of JavaScript libraries. This exercise's primary focus will be a common implementation strategy in React Native, making use of a React-Native-Toast library and more vanilla approach to handling props with parent and child relationships.
 
 This is the core exercise to get you started with React Native, if you know how to make components, you know how to make React Native apps.
 
-  
-
 In React Native, JSX uses React elements that translate to native components. for example:
 
-  
+```html
+return (
+    <TouchableOpacity
+    onPress={() => {
+      this.componentSpecificFunction();
+    }}>
+    <Image
+      style={styles.itemImage}
+      source={{
+        uri: image,
+      }}
+    />
+    </TouchableOpacity>
+);
+```
+
+The above elements are transpiled to iOS and Android button widgets with a nested image. Similar to React, these components have props (properties) that can give you control of what they do. If you notice, only one element is returned as part of the render. This is because you cannot return more than one element in React-Native, so if you want a more complex component, you must nest your sub-elements in an outer container element (in this case TouchableOpacity, but usually a \<View>).
+
+For this excercise you will be adding supporting logic and sub-component to the product catalog. At the end of this exercise you will have the basics required in order to build React-Native apps (believe me, it is a lot simpler once you are familiar with the language).
+
+1. Navigate to ExpandingTile.js, there you will an empty state object in the constructor, empty function called toggleDescriptionDisplay and an incomplete return statement inside of the render function.
+2. Start by adding a state to the state object that you will use to track whether the description is toggled or not.
+3. Now that you can track the state of the item description, you can implement it's toggling inside of the toggleDescriptionDisplay function. You can do this by calling the React function this.setState({someState: newDesiredState});
+
+You can have conditional rendering of elements by doing the following:
+
+```html
+    <View style={styles.textContainer}>
+      {logic && <Text style={styles.text}>This is great filler text {variableText} </Text>}
+    </View>
+```
+Elements are truthy, so you can render then if your boolean condition is true. If you use a component state for your boolean value, you can dynamically render an element based on a user action, **for example you can render text based on whether a button was pressed to toggle a state**.
+
+4. The logic required to toggle the description display is now there, so all that is left is to add the description elements and control it with that state.
+5. Take a look at the ProductCatalog.js and notice that it is passing a function to the expanding tile. Use the expanding tile's parent props to call that function when the tile is pressed.
+
+Most components have a style property which allows you to change how it looks. Styles in React Native are similar to CSS, however, a lot of stylings available in CSS are not available in React Native. However, there are a few styles available for React Native that are not available in CSS such as marginVertical.
+
+Note that all non-numeric styles must be wrapped in quotes.
+
+```html
+const styles = StyleSheet.create({
+  itemImage: {
+    width: '90%',
+    height: undefined,
+    aspectRatio: 1,
+    alignSelf: 'center',
+    marginVertical: 8,
+  },
+  descriptionContainer: {},
+  description: {},
+});
+```
+
+6. Style the description to look nice within the tile.
+
+#### Exercise 3: Make the Button Component
+
+Example button JSX:
 
 ```html
 <TouchableOpacity onPress={() => {}} style={styles.button}>
@@ -131,11 +164,7 @@ In React Native, JSX uses React elements that translate to native components. fo
 </TouchableOpacity>
 ```
 
-  
-
-Each of these HTML-like tags translates to a widget that is in iOS and Android. Similar to React, these components have props (properties) that can give you control of what they do. Most components have a style property which allows you to change how it looks. Styles in React Native are similar to CSS, however, a lot of stylings available in CSS are not available in React Native. Inversely there are a few styles available for React Native that are not available in CSS such as marginVertical.
-
-  Note that all non-number styles must be wrapped in quotes.
+Example button styling: 
 
 ```html
 const styles = StyleSheet.create({
@@ -207,7 +236,7 @@ Material icons have already been installed in this dojo project, so it is reccom
 
   
 
-#### Exercise 3: Give Logic to the Buttons
+#### Exercise 4: Give Logic to the Buttons
 
   
 
@@ -283,7 +312,9 @@ If you are curious as to how you might handle the case of not using conditional 
 
 https://stackoverflow.com/questions/53057531/can-i-use-condition-in-my-action-reducer
 
-  
+Parent child element communication in React-Native:
+
+https://stackoverflow.com/questions/41147874/react-native-parent-child-communication-and-return-values
 
 Here are some more references to shopping cart apps built in React Native
 
