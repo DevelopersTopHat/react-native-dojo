@@ -3,7 +3,7 @@ import {View, StyleSheet} from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-// Fill out return for the button implementation exercise
+// TODO: Fill out return for the button implementation exercise
 const ButtonComponent = props => {
   return (
     <View style={styles.buttonContainer}>
@@ -31,6 +31,7 @@ const ButtonComponent = props => {
 
 export default ButtonComponent;
 
+// TODO
 const styles = StyleSheet.create({
   buttonContainer: {
     width: '100%',

@@ -85,6 +85,8 @@ npx react-native run-ios
 
 Note: in order for the React Native project commands to be run irrespective of the version of the React Native CLI the keyword **npx** must be run before the command.
 
+Sometimes the metro server will fail to run with an error in the console. This is usually caused by a broken version of NodeJS, and can be permanently fixed by switching to a version that doesn't throw that error :). If you aren't in the mood change Node versions this is a temporary fix https://stackoverflow.com/questions/58120990/how-to-resolve-the-error-on-react-native-start  
+
 
 #### Exercise 2: Make the Expanding Tile Component
   
