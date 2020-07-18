@@ -195,7 +195,7 @@ return (
 
   
 
-4. The methods for adding and removing items are available in the props. The logic for the buttons has not been implemented yet, since that is the next exercise! The methods do need to be passed the item to add/remove like this:
+5. The methods for adding and removing items are available in the props. The logic for the buttons has not been implemented yet, since that is the next exercise! The methods do need to be passed the item to add/remove like this:
 
   
 
