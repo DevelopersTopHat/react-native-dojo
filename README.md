@@ -155,38 +155,12 @@ const styles = StyleSheet.create({
 
 #### Exercise 3: Make the Button Component
 
-Example button JSX:
-
-```html
-<TouchableOpacity onPress={() => {}} style={styles.button}>
-	<View  style={styles.textContainer}>
-		<Text  style={styles.textContent}>{props.content}</Text>
-	</View>
-</TouchableOpacity>
-```
-
-Example button styling: 
-
-```html
-const styles = StyleSheet.create({
-button: {
-	height: 30,
-	width: 30,
-	borderRadius: 15,
-	backgroundColor: 'blue',
-},
-textContainer: { },
-textContent: { },
-});
-```
+In React there is a concept refered to as functional components. These are components that do not track lifecycle methods and focus explicitly on returning JSX (that can optionally recieve state). In this exercise you will implement the functional button component that adds 2 buttons using the react-native-vector-icons library.
 
 1. For this exercise, try making a button component that adds 2 buttons using icons from react-native-vector-icons that look something like this:
 
-  
-
 <img src="docs/images/button_component.png" width="250" height="250">
 
-  
 
 2. The file you will make your changes to is src/components/ButtonComponent.js where you will add the \<Icon> component that is going to represent your button.
 
