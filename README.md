@@ -116,8 +116,9 @@ The above elements are transpiled to iOS and Android button widgets with a neste
 
 For this excercise you will be adding supporting logic and sub-component to the product catalog. At the end of this exercise you will have the basics required in order to build React-Native apps (believe me, it is a lot simpler once you are familiar with the language).
 
-1. Navigate to ExpandingTile.js, there you will an empty state object in the constructor, empty function called toggleDescriptionDisplay and an incomplete return statement inside of the render function.
-2. Start by adding a state to the state object that you will use to track whether the description is toggled or not.
+0. Try to complete the TODOs in the code. The steps below will be a general guide to help you along.
+1. Navigate to ExpandingTile.js, there you will a mostly empty state object in the constructor, an empty function called toggleDescriptionDisplay and an incomplete return statement inside of the render function.
+2. Start by adding a state to the state object that you will use to track whether the description is toggled or not. Add a wrapper element that lets you press the image, which will call the function in the next step.
 3. Now that you can track the state of the item description, you can implement it's toggling inside of the toggleDescriptionDisplay function. You can do this by calling the React function this.setState({someState: newDesiredState});
 
 You can have conditional rendering of elements by doing the following:
