@@ -28,6 +28,7 @@ class HomeScreen extends Component {
   }
 
   async componentDidMount() {
+    // Simulating retrieving data from an api
     const dataService = new DataService();
     const electronics = await dataService.getElectronicProducts();
     this.setState({products: electronics});
@@ -50,6 +51,7 @@ class HomeScreen extends Component {
   }
 }
 
+// This hooks up the reducer to the prop functions
 const mapDispatchToProps = dispatch => {
   return {
     addItemToCart: product => dispatch({type: ADD_TO_CART, payload: product}),

@@ -15,39 +15,29 @@ class ExpandingTile extends Component {
     // TODO: add state to support toggling description
     // Optional TODO: map parent props passed to child to component level state
     this.state = {
-      expanded: false,
-      description: props.description,
-      image: props.image,
-      parentToast: props.toast
+      image: props.image
     };
   }
 
-  // TODO
+  // TODO: toggle the description display by manipulating the state of whether it is shown or not
   toggleDescriptionDisplay = () => {
-    this.setState({expanded: !this.state.expanded});
+
   };
 
   render() {
     // Optional TODO: use object destructuring to make it more convenient to access state
-    const {expanded, description, image, parentToast} = this.state;
+    // You can add more to the object destructuring by doing {image, myStateHere}. Your state must exist in this.state in the constructor
+    const {image} = this.state;
 
-    // TODO: expand the tile to include description based on a state
+    // TODO: wrap the image in a container element with an onPress property. Hint: a pressable element has been imported in this file.
+    // TODO: expand the tile to include description based on a state controlled by onPress
+    // TODO: display image passed in by parent
+    // TODO: call parent method for displaying toast onPress
     return (
-      <TouchableOpacity
-        onPress={() => {
-          this.toggleDescriptionDisplay();
-          parentToast();
-        }}>
-        <Image
-          style={styles.itemImage}
-          source={{
-            uri: image,
-          }}
-        />
-        <View style={styles.descriptionContainer}>
-          {expanded && <Text style={styles.description}>{description}</Text>}
-        </View>
-      </TouchableOpacity>
+      <Image
+        style={styles.itemImage}
+        source={{ uri: image}}
+      />
     );
   }
 }
@@ -63,12 +53,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginVertical: 8,
   },
-  descriptionContainer: {
-    width: '100%',
-  },
-  description: {
-    color: '#E2E2E2',
-    fontSize: 18,
-    textAlign: 'center',
-  },
+  descriptionContainer: { },
+  description: { },
 });

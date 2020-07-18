@@ -30,12 +30,14 @@ class CartScreen extends Component {
   }
 }
 
+// maps state so that you can check the cartItems in the state list inside the reducer
 const mapStateToProps = state => {
   return {
     cartItems: state,
   };
 };
 
+// This hooks up the reducer to the prop functions
 const mapDispatchToProps = dispatch => {
   return {
     addItemToCart: product => dispatch({type: ADD_TO_CART, payload: product}),

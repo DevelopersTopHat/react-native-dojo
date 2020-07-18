@@ -3,6 +3,10 @@
 
 # Slalom's React-Native Dojo!
 
+## Solution URL:
+
+https://github.com/nilouBabak/slalomdojo-react-native
+
 ## Project Description
 
 For this dojo, we will be completing the features of a simple shopping cart application, built with React Native and Redux. The goal of the dojo is to get people more comfortable with working with mobile and React Native; Redux is simply there to introduce an alternative method for managing states. One of the exercises will require writing the logic of a Redux reducer, however the goal will not be to use redux best practices, but instead just manipulate the state to make to do what you want.
@@ -116,8 +120,9 @@ The above elements are transpiled to iOS and Android button widgets with a neste
 
 For this excercise you will be adding supporting logic and sub-component to the product catalog. At the end of this exercise you will have the basics required in order to build React-Native apps (believe me, it is a lot simpler once you are familiar with the language).
 
-1. Navigate to ExpandingTile.js, there you will an empty state object in the constructor, empty function called toggleDescriptionDisplay and an incomplete return statement inside of the render function.
-2. Start by adding a state to the state object that you will use to track whether the description is toggled or not.
+0. Try to complete the TODOs in the code. The steps below will be a general guide to help you along.
+1. Navigate to ExpandingTile.js, there you will a mostly empty state object in the constructor, an empty function called toggleDescriptionDisplay and an incomplete return statement inside of the render function.
+2. Start by adding a state to the state object that you will use to track whether the description is toggled or not. Add a wrapper element that lets you press the image, which will call the function in the next step.
 3. Now that you can track the state of the item description, you can implement it's toggling inside of the toggleDescriptionDisplay function. You can do this by calling the React function this.setState({someState: newDesiredState});
 
 You can have conditional rendering of elements by doing the following:
@@ -154,38 +159,12 @@ const styles = StyleSheet.create({
 
 #### Exercise 3: Make the Button Component
 
-Example button JSX:
-
-```html
-<TouchableOpacity onPress={() => {}} style={styles.button}>
-	<View  style={styles.textContainer}>
-		<Text  style={styles.textContent}>{props.content}</Text>
-	</View>
-</TouchableOpacity>
-```
-
-Example button styling: 
-
-```html
-const styles = StyleSheet.create({
-button: {
-	height: 30,
-	width: 30,
-	borderRadius: 15,
-	backgroundColor: 'blue',
-},
-textContainer: { },
-textContent: { },
-});
-```
+In React there is a concept refered to as functional components. These are components that do not track lifecycle methods and focus explicitly on returning JSX (that can optionally recieve state). In this exercise you will implement the functional button component that adds 2 buttons using the react-native-vector-icons library.
 
 1. For this exercise, try making a button component that adds 2 buttons using icons from react-native-vector-icons that look something like this:
 
-  
-
 <img src="docs/images/button_component.png" width="250" height="250">
 
-  
 
 2. The file you will make your changes to is src/components/ButtonComponent.js where you will add the \<Icon> component that is going to represent your button.
 
@@ -220,7 +199,7 @@ return (
 
   
 
-4. The methods for adding and removing items are available in the props. The logic for the buttons has not been implemented yet, since that is the next exercise! The methods do need to be passed the item to add/remove like this:
+5. The methods for adding and removing items are available in the props. The logic for the buttons has not been implemented yet, since that is the next exercise! The methods do need to be passed the item to add/remove like this:
 
   
 

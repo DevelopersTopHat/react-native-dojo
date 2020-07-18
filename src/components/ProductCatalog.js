@@ -30,12 +30,15 @@ class ProductCatalog extends Component {
     Toast.show('Image pressed!');
   };
 
+  // an example of dynamic rendering of an unknown number of elements
   renderProducts = products => {
     return products.map((item, index) => {
       return (
         <View key={index} style={styles.item}>
           <Text style={styles.itemText}>{item.name + ' - $' + item.price}</Text>
+          {/* The Product Catalog component is passing 3 props to its child component the Expanding Tile. Those props can be used inside the expanding tile. */}
           <ExpandingTile description={item.description} image={item.image} toast={this.displayToast} />
+          {/* Similar to the Expanding tile, the button, there are 3 props being passed to the Button Component*/}
           <ButtonComponent
             item={item}
             onPressAdd={this.props.onPressAdd}
@@ -51,6 +54,7 @@ class ProductCatalog extends Component {
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.contentContainer}>
           <View style={styles.itemContainer}>
+            {/* elements generated dynamically from a function returned as JSX */}
             {this.renderProducts(this.props.products)}
           </View>
         </View>
@@ -63,7 +67,7 @@ export default ProductCatalog;
 
 const styles = StyleSheet.create({
   scrollContainer: {
-    flexGrow: 1,
+    flexGrow: 1, // Container grows to fit the number of elements
   },
   contentContainer: {
     width: '100%',
