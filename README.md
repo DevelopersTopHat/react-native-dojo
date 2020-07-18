@@ -3,6 +3,10 @@
 
 # Slalom's React-Native Dojo!
 
+## Solution URL:
+
+https://github.com/nilouBabak/slalomdojo-react-native
+
 ## Project Description
 
 For this dojo, we will be completing the features of a simple shopping cart application, built with React Native and Redux. The goal of the dojo is to get people more comfortable with working with mobile and React Native; Redux is simply there to introduce an alternative method for managing states. One of the exercises will require writing the logic of a Redux reducer, however the goal will not be to use redux best practices, but instead just manipulate the state to make to do what you want.
