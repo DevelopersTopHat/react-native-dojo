@@ -5,7 +5,7 @@
 
 ## Solution URL:
 
-https://github.com/nilouBabak/slalomdojo-react-native
+https://github.com/DevelopersTopHat/solution-react-native-dojo
 
 ## Project Description
 
