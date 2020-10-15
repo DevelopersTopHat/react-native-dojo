@@ -19,7 +19,7 @@ Note: The installation steps are different depending on the laptop OS and the ph
 
 https://yarnpkg.com/en/docs/install
 
-https://reactnative.dev/docs/environment-setup
+https://reactnative.dev/docs/environment-setup (Select the React Native CLI Quickstart Tab)
 
   
 
