@@ -93,7 +93,9 @@ Sometimes the metro server will fail to run with an error in the console. This i
 
 
 #### Exercise 2: Make the Expanding Tile Component
-  
+
+<img src="docs/images/expanding_tile.png" width="250" height="250">
+
 A lot of the advantages of React Native come from the fact that it is written with JavaScript, which means you can take advantage of the expansive list of JavaScript libraries. This exercise's primary focus will be a common implementation strategy in React Native, making use of a React-Native-Toast library and more vanilla approach to handling props with parent and child relationships.
 
 This is the core exercise to get you started with React Native, if you know how to make components, you know how to make React Native apps.
