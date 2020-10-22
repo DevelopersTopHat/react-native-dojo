@@ -27,7 +27,7 @@ Running an application is different depending on if you use a physical device, o
 
   
 
-If you are planning on using a real device to debug your React Native application, usb debugging must be enabled on your device (https://support.brightcove.com/debugging-mobile-devices). You will also need a charging cable to connect your device to the computer you are working from.
+If you are planning on using a real device to debug your React Native application, usb debugging must be enabled on your device (https://general.support.brightcove.com/developer/debugging-mobile-devices.html). You will also need a charging cable to connect your device to the computer you are working from.
 
   
 
