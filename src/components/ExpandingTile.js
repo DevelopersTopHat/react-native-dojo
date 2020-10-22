@@ -36,7 +36,7 @@ class ExpandingTile extends Component {
     return (
       <Image
         style={styles.itemImage}
-        source={{ uri: image}}
+        source={image}
       />
     );
   }
